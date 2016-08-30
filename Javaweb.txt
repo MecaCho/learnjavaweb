@@ -4,7 +4,7 @@ Appache+Tomcat
 1.下载appache-tomcat-6.0.43
 2.解压到目录
 3.bin-startup.bat(安装JDK环境下)
-4.启动后浏览器进：localhost；8080/
+4.启动后浏览器进：localhost:8080/
 
 目录：
 bin目录存放一些启动运行Tomcat的可执行程序和相关内容。
@@ -18,8 +18,16 @@ work目录用于在服务器运行时过度资源，简单来说，就是存储j
 
 更改配置：
 1.修改Tomcat监听端口：conf目录下的server.xml文件：Connect port=“8080”（更改后重新启动Tomcat）
-2.修改默认站点：<context path="" docBase="D:/myweb" />
+2.修改默认站点：
+    <context path="" docBase="D:/myweb" />
+    文件夹--WEB-INF文件--web.xml文件
 3.修改默认页面：
+    更改欢迎页面：站点下的conf文件--web.xml 
+    <welcome-file-list>
+        <welcome-file>hello.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
 
 
 
