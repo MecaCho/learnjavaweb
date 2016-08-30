@@ -28,9 +28,7 @@ work目录用于在服务器运行时过度资源，简单来说，就是存储j
         <welcome-file>index.htm</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-    
-    
-    
+        
     
 设置虚拟机内存：
 方法一：
