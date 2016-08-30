@@ -1,0 +1,26 @@
+Appache+Tomcat
+
+配置：
+1.下载appache-tomcat-6.0.43
+2.解压到目录
+3.bin-startup.bat(安装JDK环境下)
+4.启动后浏览器进：localhost；8080/
+
+目录：
+bin目录存放一些启动运行Tomcat的可执行程序和相关内容。
+conf存放关于Tomcat服务器的全局配置。
+lib目录存放Tomcat运行或者站点运行所需的jar包，所有在此Tomcat上的站点共享这些jar包。
+wabapps目录是默认的站点根目录，可以更改。
+work目录用于在服务器运行时过度资源，简单来说，就是存储jsp、servlet翻译、编译后的结果。
+
+过程：
+服务器（Tomcat）监听8080端口---->浏览器发送请求---->Tomcat解析请求的资源
+
+更改配置：
+1.修改Tomcat监听端口：conf目录下的server.xml文件：Connect port=“8080”（更改后重新启动Tomcat）
+2.修改默认站点：<context path="" docBase="D:/myweb" />
+3.修改默认页面：
+
+
+
+
