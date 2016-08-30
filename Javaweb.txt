@@ -28,6 +28,34 @@ work目录用于在服务器运行时过度资源，简单来说，就是存储j
         <welcome-file>index.htm</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+    
+    
+    
+    
+设置虚拟机内存：
+方法一：
+打开eclipse,选择Window--Preferences...在对话框左边的树上双击Java，再双击Installed
+JREs，在右边选择前面有对勾的JRE，再单击右边的“Edit”按钮，
+出现一个 Edit JRE 的对话框，在其中的Default VM Arguments: 框中输入 -Xms128m -Xmx512m
+,这样设置Java拟虚机内存使用最小是128M，最大是512M，再单击“OK”关闭 Edit JRE 对话框，再单击“OK”关闭
+Preferences对话框，Eclipse一下子就运行快了起来
+
+方法二：
+java project 可以右击工程 Run AS
+-->选最下面Run...-->
+Arguments-->在VM arguments里面填
+-Xmx256m。这样就可以设置它运行时最大内存为256m
+
+方法三：eclipse.ini
+-showsplash 
+org.eclipse.platform 
+--launcher.XXMaxPermSize 
+128M 
+-vmargs 
+-Xms40m 
+-Xmx512m 
+-XX:MaxPermSize=256m 
+-Dosgi.bundlefile.limit=100
 
 
 
