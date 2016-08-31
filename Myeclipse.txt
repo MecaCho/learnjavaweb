@@ -1,0 +1,16 @@
+Eclipse
+
+版本管理：连接CVS
+
+导入项目出现小红×：
+    file-->import-->general-->existing projects into workspace-->选中要导入的工程，根据需要选择是否copy projects into workspace-->finish
+    按以上步骤导入后，有时项目名下会出现小红叉，但项目下的所有文件都没小红叉
+原因：
+1原工程与现在新的工程使用的JDK版本不同  
+2.CLASS_PATH,要指向依赖的jar
+
+修改： 
+1项目名-->property-->java compiler-->enable project specific setting-->选择与原工程同一版本的JDK或java build path-->add library-->jre system library-->选择机器中安装的jre版本
+2用myeclipse新建 web工程， 在工程目录下会生成一个 .classpath 配置文件，里面是你工程里面引用的jar的配置。 .classpath 文件里面引用了某个jar，但是实际上你的 lib 里面并没有这个jar 所以才会有红色的提示。
+右键单击你的web工程，找到 Build Path > Configure Build Paht... > 然后上面有几个选项卡找到 Libraries。  这里看到的就是你工程里面引用的 所有的 jar ，看看是不是在某个jar图标上有个很小的黄色的感叹号？如果有的话就没错了，先选中这个jar， 点击右边的 Remove  > 点击OK  等待几秒，现在web工程上面的红色XX是不是没有了。 
+解释一下：黄色的感叹号的jar，表示.classpath配置文件引用了jar， 但是实际上lib里面没有这个jar。 
